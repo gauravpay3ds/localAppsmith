@@ -3,6 +3,10 @@
     {
       "id": "LoginForm",
       "isDefault": true
+    },
+    {
+      "id": "BillFeature",
+      "isDefault": false
     }
   ],
   "viewMode": false,
