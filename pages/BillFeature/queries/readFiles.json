@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "amazons3-plugin",
   "unpublishedAction": {
-    "name": "uploadFile",
+    "name": "readFiles",
     "datasource": {
       "name": "S3NCLC",
       "pluginId": "amazons3-plugin",
@@ -20,13 +20,13 @@
       "encodeParamsToggle": true,
       "formData": {
         "body": {
-          "data": "{{FilePicker1.files[0]}}"
+          "data": ""
         },
         "bucket": {
           "data": "nclc-paymentus"
         },
         "command": {
-          "data": "UPLOAD_FILE_FROM_BODY"
+          "data": "READ_FILE"
         },
         "create": {
           "dataType": {
@@ -69,7 +69,7 @@
           }
         },
         "path": {
-          "data": "nclctest/{{FilePicker1.files[0].name}}"
+          "data": "nclctest/ZPay.jfif"
         },
         "read": {
           "dataType": {
@@ -81,28 +81,18 @@
         }
       }
     },
-    "executeOnLoad": true,
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.path.data"
-      },
-      {
-        "key": "formData.body.data"
-      }
-    ],
+    "executeOnLoad": false,
+    "dynamicBindingPathList": [],
     "isValid": true,
     "invalids": [],
     "messages": [],
-    "jsonPathKeys": [
-      "FilePicker1.files[0]",
-      "FilePicker1.files[0].name"
-    ],
+    "jsonPathKeys": [],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "BillFeature_uploadFile",
+  "id": "BillFeature_readFiles",
   "deleted": false,
-  "gitSyncId": "62cd1a756207e35017583cf2_62cd5dd96207e35017583d0a"
+  "gitSyncId": "62cd1a756207e35017583cf2_62cd65f26207e35017583d27"
 }

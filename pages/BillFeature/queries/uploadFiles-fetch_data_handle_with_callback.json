@@ -2,8 +2,8 @@
   "pluginType": "JS",
   "pluginId": "js-plugin",
   "unpublishedAction": {
-    "name": "fillTable",
-    "fullyQualifiedName": "JSObject1.fillTable",
+    "name": "fetch_data_handle_with_callback",
+    "fullyQualifiedName": "uploadFiles.fetch_data_handle_with_callback",
     "datasource": {
       "name": "UNUSED_DATASOURCE",
       "pluginId": "js-plugin",
@@ -14,17 +14,16 @@
       "userPermissions": []
     },
     "pageId": "BillFeature",
-    "collectionId": "BillFeature_JSObject1",
+    "collectionId": "BillFeature_uploadFiles",
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
       "encodeParamsToggle": true,
-      "body": "() => {}",
+      "body": "() => {\n  uploadFile.run(response => {\n    return response;\n  }, error => {\n    showAlert('Failed to fetch data' + error);\n  });\n}",
       "jsArguments": [],
-      "isAsync": false
+      "isAsync": true
     },
     "executeOnLoad": false,
-    "clientSideExecution": true,
     "dynamicBindingPathList": [
       {
         "key": "body"
@@ -34,14 +33,14 @@
     "invalids": [],
     "messages": [],
     "jsonPathKeys": [
-      "() => {}"
+      "() => {\n  uploadFile.run(response => {\n    return response;\n  }, error => {\n    showAlert('Failed to fetch data' + error);\n  });\n}"
     ],
     "userSetOnLoad": false,
     "confirmBeforeExecute": false,
     "policies": [],
     "userPermissions": []
   },
-  "id": "BillFeature_JSObject1.fillTable",
+  "id": "BillFeature_uploadFiles.fetch_data_handle_with_callback",
   "deleted": false,
-  "gitSyncId": "62cd1a756207e35017583cf2_62cd5fd46207e35017583d11"
+  "gitSyncId": "62cd1a756207e35017583cf2_62cd76726207e35017583d36"
 }

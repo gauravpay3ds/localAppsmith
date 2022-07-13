@@ -1,0 +1,15 @@
+{
+  "unpublishedCollection": {
+    "name": "uploadFiles",
+    "pageId": "BillFeature",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "actions": [],
+    "archivedActions": [],
+    "body": "export default {\n\tfetch_data_handle_with_callback: () => {\n\t\tuploadFile.run((response) => {\n\t\t\treturn response;\n\t\t},(error) => {\n\t\t\tshowAlert('Failed to fetch data' + error);\n\t\t});\t\t\t\n\t},\n}",
+    "variables": []
+  },
+  "id": "BillFeature_uploadFiles",
+  "deleted": false,
+  "gitSyncId": "62cd1a756207e35017583cf2_62cd5fd46207e35017583d15"
+}
